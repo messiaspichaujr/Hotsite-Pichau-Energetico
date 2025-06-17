@@ -1,50 +1,53 @@
 // LOADER
+// Tempo mínimo que a logo ficará visível (2 segundos)
 const MIN_LOADING_TIME = 2000;
-let startTime = Date.now();
+let pageLoaded = false;
 let loadingTimer = null;
 
+// Função para esconder o loading quando a página estiver pronta
 function hideLoading() {
     const loading = document.getElementById('loading');
     const mainContent = document.getElementById('mainContent');
 
+    // Adiciona classe para esmaecer o loading
     loading.classList.add('fade-out');
 
+    // Mostra o conteúdo principal
     setTimeout(() => {
         mainContent.classList.add('show');
 
+        // Remove o loading do DOM após a transição
         setTimeout(() => {
             loading.remove();
-            document.body.style.overflow = 'auto';
-        }, 800);
-    }, 300);
+        }, 800); // Tempo igual à duração da transição
+    }, 300); // Pequeno atraso para sincronizar as animações
 }
 
-function handleLoading() {
-    const elapsed = Date.now() - startTime;
-    const remaining = Math.max(0, MIN_LOADING_TIME - elapsed);
-
-    loadingTimer = setTimeout(hideLoading, remaining);
-}
-
+// Verifica quando a página termina de carregar
 window.addEventListener('load', function () {
+    pageLoaded = true;
 
+    // Se o tempo mínimo já passou, esconde imediatamente
     if (Date.now() - startTime >= MIN_LOADING_TIME) {
         hideLoading();
     }
-
+    // Caso contrário, espera o tempo restante
     else {
-        handleLoading();
+        const remainingTime = MIN_LOADING_TIME - (Date.now() - startTime);
+        loadingTimer = setTimeout(hideLoading, remainingTime);
     }
 });
 
-setTimeout(function () {
-    if (document.readyState === 'complete' && loadingTimer) {
-        clearTimeout(loadingTimer);
+// Garante que o loading ficará pelo menos 2 segundos na tela
+const startTime = Date.now();
+
+// Se a página carregar muito rápido, ainda mantemos o loading por 2 segundos
+loadingTimer = setTimeout(function () {
+    if (pageLoaded) {
         hideLoading();
     }
-}, MIN_LOADING_TIME + 1000);
-
-
+    // Se a página ainda não carregou, o evento 'load' cuidará de esconder
+}, MIN_LOADING_TIME);
 
 // Animação do menu hamburguer
 
@@ -69,9 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
-
 // efeito da lata - section 2
 
 const model = document.getElementById('lata3d');
@@ -94,7 +94,6 @@ window.addEventListener('scroll', () => {
 
 
 // efeito 3d das latas da ultima section
-
 
 const viewer = document.getElementById('lataViewer');
 const modelContainer = document.querySelector('.model-container');

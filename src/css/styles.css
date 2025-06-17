@@ -59,7 +59,7 @@
       font-family: 'efeito-normal', sans-serif;
   }
 
-  /*loading */
+  /* Estilo do loading */
 
   .loading-container {
       position: fixed;
@@ -76,8 +76,8 @@
   }
 
   .loading-logo {
-      max-width: 300px;
-      max-height: 300px;
+      max-width: 200px;
+      max-height: 200px;
       animation: pulse 1.5s infinite ease-in-out;
   }
 
@@ -109,9 +109,8 @@
       opacity: 1;
   }
 
-
   /*BG1*/
-  
+
   #bg-1 {
       width: 100%;
       height: auto;
