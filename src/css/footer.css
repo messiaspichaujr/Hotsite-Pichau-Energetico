@@ -1,0 +1,187 @@
+.hr-solid {
+  border: none;
+  height: 1px;
+  width: 50%;
+  margin: 40px auto;
+  /* centraliza horizontalmente */
+  background-color: #ffffff3f;
+}
+
+.footer-st {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  gap: 2rem;
+}
+
+.footer-st img {
+  max-width: 100%;
+}
+
+.footer-st p {
+  font-size: 1.2em;
+}
+
+/* 3D */
+
+#sabor-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 14px 20px;
+  min-height: 60vh;
+  transition: background 0.8s ease-in-out;
+}
+
+.model-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/**/
+
+.sabor-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/*1*/
+.sabor-options button {
+  padding: 12px 24px;
+  color: white;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'efeito-bold', sans-serif;
+}
+
+.btn-1 {
+  background: #c22a23;
+}
+
+.btn-1:hover {
+  background: #fff;
+  color: #c22a23;
+  border-color: #c22a23;
+}
+
+.btn-2 {
+  background: #ca7410;
+}
+
+.btn-2:hover {
+  background: #fff;
+  color: #ca7410;
+  border-color: #ca7410;
+}
+
+.btn-3 {
+  background: #00ccff;
+}
+
+.btn-3:hover {
+  background: #fff;
+  color: #00ccff;
+  border-color: #00ccff;
+}
+
+/**/
+
+.bg-original {
+  max-width: 100%;
+  height: auto;
+  background-image: var(--bg1-3d);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-tropical {
+  max-width: 100%;
+  height: auto;
+  background-image: var(--bg2-3d);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-zero {
+  max-width: 100%;
+  height: auto;
+  background-image: var(--bg3-3d);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@keyframes pulse-bg {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes scanlines {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.sabor-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sabor-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .sabor-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sabor-options {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .sabor-options button {
+    width: 100%;
+    max-width: 250px;
+    font-size: 0.9rem;
+  }
+}

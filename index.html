@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotsite - Energético Pichau</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="shortcut icon" href="./src/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-green.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+    <!---Loader--->
+
+    <div class="loading-container" id="loading">
+        <img src="./src/assets/logo-bg1.png" alt="Logo da Marca" class="loading-logo">
+    </div>
+
+    <!-------1 FEATURE------->
+
+    <section id="bg-1">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#"><img src="./src/assets/logo.png" alt="Logo" class="logo"></a>
+
+                <ul class="nav-links">
+                    <li><a href="#sabor-section">CONHEÇA O PICHAU ENERGY DRINK</a></li>
+                    <li><a href="#bg-2">ORIGINAL</a></li>
+                    <li><a href="#bg-3">TROPICAL</a></li>
+                    <li><a href="#bg-4">ZERO AÇÚCARES</a></li>
+                    <li><a href="#btn-comprar">COMPRE AGORA</a></li>
+                </ul>
+
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="inf-bg1">
+            <div class="infos-bg1 mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <img src="./src/assets/logo-bg1.png" alt="Logo Pichau Energy Drink">
+                <p>Chegou o energético que faltava pra sua rotina intensa! A Pichau, referência gamer na América Latina,
+                    orgulhosamente apresenta o Pichau Energy Drink. Pensado pra quem vive no ritmo acelerado das
+                    gameplays, maratonas de trabalho e tudo o que exige foco total.</p>
+                <p>A gente sabe que passar horas jogando, trabalhando ou estudando exige mais do que concentração,
+                    precisa de combustível! E como bons entendedores de setup, agora trazemos também uma bebida pra
+                    manter seu ritmo no alto e seu cansaço no low. Três sabores, zero enrolação, e a qualidade que só a
+                    Pichau entrega (com ou sem asas)!</p>
+                <button class="liquid-btn"><a href="#" target="_blank">Conheça Agora</a></button>
+            </div>
+
+            <div class="lata-bg1 mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <img src="./src/assets/latinhas-bg1.png" alt="Logo Pichau Energy Drink">
+            </div>
+        </div>
+    </section>
+
+    <!-------3D FEATURE------->
+
+    <section id="sabor-section" class="bg-original">
+        <div class="sabor-container">
+
+            <div class="sabor-options mdl-cell mdl-cell--2-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <button class="btn-1" data-model="./src/assets/original.glb" data-bg="bg-original">ORIGINAL</button>
+                <button class="btn-2" data-model="./src/assets/tropical.glb" data-bg="bg-tropical">TROPICAL</button>
+                <button class="btn-3" data-model="./src/assets/zero.glb" data-bg="bg-zero">ZERO AÇÚCARES</button>
+            </div>
+
+            <div
+                class="model-container mdl-cell mdl-cell--8-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <model-viewer id="lataViewer" src="./src/assets/lata-final.glb" alt="Lata 3D" auto-rotate
+                    camera-controls disable-zoom interaction-prompt="none" reveal="auto"
+                    style="width: 100%; max-width: 900px; height: 900px;">
+                </model-viewer>
+            </div>
+
+            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+        </div>
+    </section>
+
+    <!-------2 FEATURE------->
+
+    <section id="bg-2">
+        <div class="container-bg2 mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+            <div class="specs-bg2">
+                <img src="./src/assets/title-bg2.png" alt="Original">
+                <p>Aquele clássico que nunca dá alt+f4. O sabor Original do Pichau Energy Drink traz aquele empurrão
+                    certeiro pra te manter acordado, focado e pronto para o que vier, da ranqueada decisiva até o
+                    relatório de última hora!</p>
+            </div>
+            <div class="lata-lab">
+                <model-viewer src="./src/assets/original.glb" alt="energético" id="lata3d" alt="Lata 3D" auto-rotate
+                    camera-controls disable-zoom interaction-prompt="none" reveal="auto" class="lata3d">
+                </model-viewer>
+
+                <img class="design-lab" src="./src/assets/desinglab-bg2.png" alt="Pichau Design lab">
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--hide-tablet mdl-cell--hide-phone">
+            <!-- <img src="./src/assets/BG2.png" alt="background 2"> -->
+        </div>
+    </section>
+
+    <!-------3 FEATURE------->
+
+    <section id="bg-3">
+        <div class="container-bg3">
+            <div class="specs-bg3 mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <img src="./src/assets/tropical.png" alt="tropical">
+                <p>Se o seu jogo é fugir do óbvio, o sabor Tropical foi feito pra você! O Tropical é a pedida certa pra
+                    quem quer manter o gás lá em cima, sendo ideal para sessões longas, ou pra quando o calor bate e
+                    você ainda tem meia dúzia de partidas pela frente.</p>
+            </div>
+            <div class="asset-bg3 mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <img class="mdl-cell--hide-desktop" src="./src/assets/lata-bg33.png"
+                    alt="foto do energético de tropical">
+            </div>
+        </div>
+    </section>
+
+    <!-------4 FEATURE------->
+
+    <section id="bg-4">
+        <div class="container1-bg4">
+            <div class="asset-bg4 mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <img src="./src/assets/lata4.png" alt="lata energético">
+            </div>
+            <div class="specs-bg4 mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <img src="./src/assets/zero-acucares.png" alt="zero açúcares">
+                <p>Quer desempenho, mas sem açúcar? A versão Zero Açúcares entrega o mesmo efeito energético, com uma
+                    fórmula pensada pra quem cuida do corpo sem abrir mão da produtividade. É tipo aquele buff
+                    silencioso que faz toda diferença no final da partida!
+                </p>
+            </div>
+        </div>
+        <div id="btn-comprar"></div>
+        <div class="container2-bg4">
+            <div class="specs-bg5 mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <img src="./src/assets/energia.png" alt="energia que é a sua cara">
+                <p>Se você já confia na Pichau pra montar o setup dos sonhos, agora pode contar com a gente pra manter a
+                    energia lá em cima! O Pichau Energy Drink veio pra ser seu aliado nos momentos que exigem foco,
+                    resistência e um empurrãozinho extra, com sabor e personalidade.
+                </p>
+
+                <p>Do clutch ao café da manhã, da live ao deadline, o Pichau Energy Drink chega voando baixo pra te
+                    acompanhar. Escolha seu sabor favorito e descubra o que acontece quando a energia encontra o alto
+                    desempenho!
+                </p>
+                <button class="liquid-btn"><a href="#" target="_blank">Compre Agora</a></button>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/pichauoficial/?hl=pt-br" target="_blank"><img
+                            src="./src/assets/Instagram.png" alt="instagram"></a>
+                    <a href="https://www.facebook.com/PichauInfo/?locale=pt_BR" target="_blank"><img
+                            src="./src/assets/Facebook.png" alt="facebook"></a>
+                    <a href="https://www.youtube.com/@pichauinfo" target="_blank"><img src="./src/assets/YouTube.png"
+                            alt="youtube"></a>
+                    <a href="https://x.com/pichauinfo" target="_blank"><img src="./src/assets/x.png" alt="x"></a>
+                    <a href="https://www.tiktok.com/@pichauoficial" target="_blank"><img src="./src/assets/TikTok.png"
+                            alt="tiktok"></a>
+                </div>
+            </div>
+            <div class="pombo-bg5 mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <img src="./src/assets/pombo.png" alt="pombo">
+            </div>
+        </div>
+
+        <footer id="foot">
+            <div class="footer-st">
+                <img src="./src/assets/logo-footer.png" alt="logo pichau">
+                <p>Copyright © 2025<br>
+                    Pichau Gaming - Todos os direitos reservados</p>
+            </div>
+        </footer>
+    </section>
+
+    <script src="./src/js/index.js"></script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> -->
+</body>
+
+</html>
