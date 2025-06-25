@@ -25,4 +25,6 @@ Cada sabor possui um modelo 3D interativo exclusivo, que pode ser explorado pelo
 
 ## 📸 Demonstração
 
+https://hotsite.pichau.com.br/pichau-energy/
+
 ![image](https://github.com/user-attachments/assets/4f2f2e5b-a310-491e-8047-858de42d0943)
